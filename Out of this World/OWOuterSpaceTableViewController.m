@@ -53,16 +53,20 @@
     [self.planets addObject:planet7];
     [self.planets addObject:planet8];
     
-    NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc] init];
-    NSString *firstColor = @"red";
-    [myDictionary setObject:firstColor forKey:@"firetruck color"];
-    [myDictionary setObject:@"blue" forKey:@"ocean color"];
-    [myDictionary setObject:@"yellow" forKey:@"star color"];
-    NSLog(@"%@", myDictionary);
+//    NSMutableDictionary *myDictionary = [[NSMutableDictionary alloc] init];
+//    NSString *firstColor = @"red";
+//    [myDictionary setObject:firstColor forKey:@"firetruck color"];
+//    [myDictionary setObject:@"blue" forKey:@"ocean color"];
+//    [myDictionary setObject:@"yellow" forKey:@"star color"];
+//    NSLog(@"%@", myDictionary);
+//    
+//    NSString *blueString = [myDictionary objectForKeyedSubscript:@"ocean color"];
+//    NSLog(@"%@", blueString);
     
-    NSString *blueString = [myDictionary objectForKeyedSubscript:@"ocean color"];
-    NSLog(@"%@", blueString);
-    
+    NSNumber *myNumber = [NSNumber numberWithInt:5];
+    NSLog(@"%@", myNumber);
+    NSNumber *floatNumber = [NSNumber numberWithFloat:3.14];
+    NSLog(@"%@",floatNumber);
 }
 
 - (void)didReceiveMemoryWarning
