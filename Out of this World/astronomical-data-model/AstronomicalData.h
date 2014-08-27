@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 #define PLANET_NAME @"Planet Name"
-#define PLANET_GRAVITY @"Acelleration of Gravity at Surface"
+#define PLANET_GRAVITY @"Acceleration of Gravity at Surface"
 #define PLANET_DIAMETER @"Planet Size"
 #define PLANET_YEAR_LENGTH @"Planet Year Length"
 #define PLANET_DAY_LENGTH @"Length of Day in Hours"
