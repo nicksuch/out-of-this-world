@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="24b-L2-z0K">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="74x-gb-6vW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Outer Space Table View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="0X0-e4-oN1">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="74x-gb-6vW" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MHa-Uj-CHm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="24b-L2-z0K" kind="relationship" relationship="rootViewController" id="4pB-c1-CHq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c6p-ZB-qoe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="56"/>
+        </scene>
+        <!--Outer Space Table View Controller - Planets-->
         <scene sceneID="hlr-8L-mTc">
             <objects>
                 <tableViewController id="24b-L2-z0K" customClass="OWOuterSpaceTableViewController" sceneMemberID="viewController">
@@ -13,11 +28,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Vs0-AT-fkT" detailTextLabel="48K-xs-97n" style="IBUITableViewCellStyleSubtitle" id="g6P-fZ-E1G">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="Vs0-AT-fkT" detailTextLabel="48K-xs-97n" style="IBUITableViewCellStyleSubtitle" id="g6P-fZ-E1G">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g6P-fZ-E1G" id="nTs-xO-7nC">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vs0-AT-fkT">
@@ -36,6 +51,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="GmW-x8-eqd" kind="push" id="3Vd-cd-iKQ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -43,10 +61,39 @@
                             <outlet property="delegate" destination="24b-L2-z0K" id="8z1-hW-bw9"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Planets" id="EdJ-76-jDb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uL9-BH-uiQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="253" y="56"/>
+        </scene>
+        <!--Space Image View Controller-->
+        <scene sceneID="lpk-wX-5ZP">
+            <objects>
+                <viewController id="GmW-x8-eqd" customClass="OWSpaceImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m3g-EI-vaq"/>
+                        <viewControllerLayoutGuide type="bottom" id="nws-AD-PLc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h1w-Dk-A2x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="obz-id-y4A">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tOS-BY-fhG"/>
+                    <connections>
+                        <outlet property="scrollView" destination="obz-id-y4A" id="4go-w8-xcj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0Z-vy-EWo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="62"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

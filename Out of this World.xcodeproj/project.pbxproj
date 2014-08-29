@@ -21,6 +21,7 @@
 		B05C746719A61CF00028081A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B05C746519A61CF00028081A /* InfoPlist.strings */; };
 		B05C746919A61CF00028081A /* Out_of_this_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B05C746819A61CF00028081A /* Out_of_this_WorldTests.m */; };
 		B05C747419A61D710028081A /* OWOuterSpaceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B05C747319A61D710028081A /* OWOuterSpaceTableViewController.m */; };
+		B076D2BF19B1397F007D83C7 /* OWSpaceImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B076D2BE19B1397F007D83C7 /* OWSpaceImageViewController.m */; };
 		B0AB079519AE2969002EB9D3 /* Earth.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0AB078B19AE2969002EB9D3 /* Earth.jpg */; };
 		B0AB079619AE2969002EB9D3 /* EinsteinRing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0AB078C19AE2969002EB9D3 /* EinsteinRing.jpg */; };
 		B0AB079719AE2969002EB9D3 /* Jupiter.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0AB078D19AE2969002EB9D3 /* Jupiter.jpg */; };
@@ -65,6 +66,8 @@
 		B05C746819A61CF00028081A /* Out_of_this_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Out_of_this_WorldTests.m; sourceTree = "<group>"; };
 		B05C747219A61D710028081A /* OWOuterSpaceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWOuterSpaceTableViewController.h; sourceTree = "<group>"; };
 		B05C747319A61D710028081A /* OWOuterSpaceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWOuterSpaceTableViewController.m; sourceTree = "<group>"; };
+		B076D2BD19B1397F007D83C7 /* OWSpaceImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSpaceImageViewController.h; sourceTree = "<group>"; };
+		B076D2BE19B1397F007D83C7 /* OWSpaceImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSpaceImageViewController.m; sourceTree = "<group>"; };
 		B0AB078B19AE2969002EB9D3 /* Earth.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Earth.jpg; sourceTree = "<group>"; };
 		B0AB078C19AE2969002EB9D3 /* EinsteinRing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = EinsteinRing.jpg; sourceTree = "<group>"; };
 		B0AB078D19AE2969002EB9D3 /* Jupiter.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jupiter.jpg; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 				B05C744F19A61CF00028081A /* Main.storyboard */,
 				B05C747219A61D710028081A /* OWOuterSpaceTableViewController.h */,
 				B05C747319A61D710028081A /* OWOuterSpaceTableViewController.m */,
+				B076D2BD19B1397F007D83C7 /* OWSpaceImageViewController.h */,
+				B076D2BE19B1397F007D83C7 /* OWSpaceImageViewController.m */,
 				B0D230CE19ACD57B00B34AAA /* OWSpaceObject.h */,
 				B0D230CF19ACD57B00B34AAA /* OWSpaceObject.m */,
 				B05C745519A61CF00028081A /* Images.xcassets */,
@@ -321,6 +326,7 @@
 				B05C744E19A61CF00028081A /* OWAppDelegate.m in Sources */,
 				B05C744A19A61CF00028081A /* main.m in Sources */,
 				B0BD39BC19ACCDD00003932B /* AstronomicalData.m in Sources */,
+				B076D2BF19B1397F007D83C7 /* OWSpaceImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
