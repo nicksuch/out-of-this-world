@@ -59,10 +59,9 @@
     NSLog(@"%@",floatNumber);
 }
 
-- (void)didReceiveMemoryWarning
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSLog(@"Sender: %@", sender);
 }
 
 #pragma mark - Table view data source
