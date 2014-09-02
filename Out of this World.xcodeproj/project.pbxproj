@@ -34,6 +34,7 @@
 		B0AB079E19AE2969002EB9D3 /* Venus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B0AB079419AE2969002EB9D3 /* Venus.jpg */; };
 		B0BD39BC19ACCDD00003932B /* AstronomicalData.m in Sources */ = {isa = PBXBuildFile; fileRef = B0BD39BB19ACCDD00003932B /* AstronomicalData.m */; };
 		B0D230D019ACD57B00B34AAA /* OWSpaceObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B0D230CF19ACD57B00B34AAA /* OWSpaceObject.m */; };
+		B0DCA9BC19B5FEFE00622C2E /* OWSpaceDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0DCA9BB19B5FEFE00622C2E /* OWSpaceDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		B0BD39BB19ACCDD00003932B /* AstronomicalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AstronomicalData.m; sourceTree = "<group>"; };
 		B0D230CE19ACD57B00B34AAA /* OWSpaceObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSpaceObject.h; sourceTree = "<group>"; };
 		B0D230CF19ACD57B00B34AAA /* OWSpaceObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSpaceObject.m; sourceTree = "<group>"; };
+		B0DCA9BA19B5FEFE00622C2E /* OWSpaceDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OWSpaceDataViewController.h; sourceTree = "<group>"; };
+		B0DCA9BB19B5FEFE00622C2E /* OWSpaceDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OWSpaceDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				B05C747319A61D710028081A /* OWOuterSpaceTableViewController.m */,
 				B076D2BD19B1397F007D83C7 /* OWSpaceImageViewController.h */,
 				B076D2BE19B1397F007D83C7 /* OWSpaceImageViewController.m */,
+				B0DCA9BA19B5FEFE00622C2E /* OWSpaceDataViewController.h */,
+				B0DCA9BB19B5FEFE00622C2E /* OWSpaceDataViewController.m */,
 				B0D230CE19ACD57B00B34AAA /* OWSpaceObject.h */,
 				B0D230CF19ACD57B00B34AAA /* OWSpaceObject.m */,
 				B05C745519A61CF00028081A /* Images.xcassets */,
@@ -326,6 +331,7 @@
 				B05C744E19A61CF00028081A /* OWAppDelegate.m in Sources */,
 				B05C744A19A61CF00028081A /* main.m in Sources */,
 				B0BD39BC19ACCDD00003932B /* AstronomicalData.m in Sources */,
+				B0DCA9BC19B5FEFE00622C2E /* OWSpaceDataViewController.m in Sources */,
 				B076D2BF19B1397F007D83C7 /* OWSpaceImageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
