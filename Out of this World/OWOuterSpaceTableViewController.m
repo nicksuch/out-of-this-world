@@ -107,6 +107,13 @@
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+
+-(void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"accessory button is working at %i", indexPath.row);
+}
+
 
 /*
 // Override to support conditional editing of the table view.
