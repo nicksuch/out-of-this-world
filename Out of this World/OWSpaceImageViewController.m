@@ -32,8 +32,14 @@
     [self.scrollView addSubview:self.imageView];
 
     self.scrollView.delegate = self;
-    self.scrollView.maximumZoomScale = 2.0;
-    self.scrollView.minimumZoomScale = 0.5;
+    self.scrollView.backgroundColor = [UIColor blackColor];
+    // Makes the default zoom scale match image width to screen width
+    float initialScale = 320 / self.spaceObject.planetImage.size.width;
+    self.scrollView.maximumZoomScale = 3 * initialScale;
+    self.scrollView.minimumZoomScale = 0.5 * initialScale;
+    self.scrollView.zoomScale = initialScale;
+    NSLog(@"Initial scale: %f", initialScale);
+
 }
 
 -(UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
