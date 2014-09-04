@@ -88,13 +88,21 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 1;
+    if ([self.addedSpaceObjects count]) {
+        return 2;
+    } else {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.planets count];
+    if (section == 1) {
+        return [self.addedSpaceObjects count];
+    } else {
+        return [self.planets count];
+    }
 
 }
 
@@ -104,15 +112,21 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    OWSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
-    cell.textLabel.text = planet.name;
-    cell.detailTextLabel.text = planet.nickname;
-    cell.imageView.image = planet.planetImage;
     
-    cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.textColor = [UIColor whiteColor];
-    cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
-    tableView.backgroundColor = [UIColor blackColor]; // This wasn't working via Storyboard, so added it here
+    if (indexPath.section == 1) {
+        // Use new space object to customize our cell
+    } else {
+        // Use initial space objects to customize cell
+        OWSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.planetImage;
+        
+        cell.backgroundColor = [UIColor clearColor];
+        cell.textLabel.textColor = [UIColor whiteColor];
+        cell.detailTextLabel.textColor = [UIColor colorWithWhite:0.5 alpha:1.0];
+        tableView.backgroundColor = [UIColor blackColor]; // This wasn't working via Storyboard, so added it here
+    }
     
     return cell;
 }
