@@ -67,7 +67,15 @@
         if ([segue.destinationViewController isKindOfClass:[OWSpaceImageViewController class]]) {
             OWSpaceImageViewController *nextViewController = segue.destinationViewController;
             NSIndexPath *path = [self.tableView indexPathForCell:sender];
-            OWSpaceObject *selectedObject = self.planets[path.row];
+            OWSpaceObject *selectedObject;
+            
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1){
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
             nextViewController.spaceObject = selectedObject;
         }
     }
@@ -76,7 +84,15 @@
         if ([ segue.destinationViewController isKindOfClass:[OWSpaceDataViewController class]]) {
             OWSpaceDataViewController *nextViewController = segue.destinationViewController;
             NSIndexPath *path = sender;
-            OWSpaceObject *selectedObject = self.planets[path.row];
+            OWSpaceObject *selectedObject;
+            
+            if (path.section == 0) {
+                selectedObject = self.planets[path.row];
+            }
+            else if (path.section == 1){
+                selectedObject = self.addedSpaceObjects[path.row];
+            }
+            
             nextViewController.spaceObject = selectedObject;
         }
     }
