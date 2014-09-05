@@ -96,10 +96,16 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
--(void)addSpaceObject
+-(void)addSpaceObject:(OWSpaceObject *)spaceObject
 {
+    if (!self.addedSpaceObjects) {
+        self.addedSpaceObjects = [[NSMutableArray alloc]init];
+    }
+    [self.addedSpaceObjects addObject:spaceObject];
     NSLog(@"addSpaceObject");
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [self.tableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -134,6 +140,10 @@
     
     if (indexPath.section == 1) {
         // Use new space object to customize our cell
+        OWSpaceObject *planet = [self.addedSpaceObjects objectAtIndex:indexPath.row];
+        cell.textLabel.text = planet.name;
+        cell.detailTextLabel.text = planet.nickname;
+        cell.imageView.image = planet.planetImage;
     } else {
         // Use initial space objects to customize cell
         OWSpaceObject *planet = [self.planets objectAtIndex:indexPath.row];

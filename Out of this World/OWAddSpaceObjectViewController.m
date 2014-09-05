@@ -49,7 +49,8 @@
 
 - (IBAction)addButtonPressed:(UIButton *)sender
 {
-    [self.delegate addSpaceObject];
+    OWSpaceObject *newSpaceObject = [self returnNewSpaceObject];
+    [self.delegate addSpaceObject:newSpaceObject];
 }
 
 -(OWSpaceObject *)returnNewSpaceObject
@@ -61,6 +62,7 @@
     addedSpaceObject.temperature = [self.temperatureTextField.text floatValue];
     addedSpaceObject.numberOfMoons = [self.numberOfMoonsTextField.text intValue];
     addedSpaceObject.interestFact = self.interestingFactTextField.text;
+    addedSpaceObject.planetImage = [UIImage imageNamed:@"EinsteinRing.jpg"];
     
     return addedSpaceObject;
 }
