@@ -80,7 +80,26 @@
             nextViewController.spaceObject = selectedObject;
         }
     }
+    
+    if ([segue.destinationViewController isKindOfClass:[OWAddSpaceObjectViewController class]]) {
+        OWAddSpaceObjectViewController *addSpaceObjectVC = segue.destinationViewController;
+        addSpaceObjectVC.delegate = self;
+    }
         
+}
+
+#pragma mark - OWAddSpaceObjectViewControllerDelegate
+
+-(void)didCancel
+{
+    NSLog(@"didCancel");
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)addSpaceObject
+{
+    NSLog(@"addSpaceObject");
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
